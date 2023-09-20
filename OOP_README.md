@@ -1,5 +1,5 @@
 ### OOP
-#### <u> class variable </u>
+#### *class variable*
 * class variables are shared among all instances of the class.
 * instance variables unique to each instances e.g. name, pay, email etc.
 * class variable should be same for the each instances.
