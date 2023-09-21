@@ -50,10 +50,27 @@ dev_1 = Developer("John", "Deere", 20000, "Python")
 dev_2 = Developer("Michael", "Jordan", 30000, "Java")
 mgr_1 = Manager("Sue", "Morgan", 900000, [dev_1])
 
+# add employees to the manager both John and Michael
+mgr_1.add_emp(dev_2)
+
+# remove employee
+mgr_1.remove_emp(dev_1)
+
 print(mgr_1.email)
+print(mgr_1.print_emps())
 #print(help(Developer))
 # print(dev_1.email)
 # print(dev_2.email)
 # print(dev_1.email)
 # #dev_1.apply_raise()
 # print(dev_1.prog_lang)
+
+# check if is instance or is class
+print(isinstance(mgr_1, Manager)) # True
+print(isinstance(mgr_1, Employee)) # True
+print(isinstance(mgr_1, Developer)) # False
+
+# check if is subclass
+print(issubclass(Developer, Employee)) #True
+print(issubclass(Manager, Employee)) # True
+print(issubclass(Manager, Developer)) # False
