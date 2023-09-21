@@ -16,12 +16,21 @@ class Employee:
         self.pay = int(self.pay * self.raise_amt)
 # inheriting from Employee class
 class Developer(Employee):
-    pass
+    raise_amt = 1.10
+    def __init__(self, first, last, pay, prog_lang): # added programming language
+        #use first, last and pay from the parent class Employee.
+        super().__init__(first, last, pay)
+        # or Employee.__init__(self, first, last, pay)
+        self.prog_lang = prog_lang
 
 
-dev_1 = Employee("John", "Deere", 20000)
-dev_2 = Employee("Michael", "Jordan", 30000)
 
-print(dev_1.first)
-print(dev_2.last)
-print(dev_1.fullname())
+dev_1 = Developer("John", "Deere", 20000, "Python")
+dev_2 = Developer("Michael", "Jordan", 30000, "Java")
+
+#print(help(Developer))
+# print(dev_1.email)
+# print(dev_2.email)
+print(dev_1.email)
+#dev_1.apply_raise()
+print(dev_1.prog_lang)
