@@ -28,7 +28,8 @@ class Employee:
         #split the string 
         first, last, pay = emp_str_1.split("-")
         return cls(first, last, pay)
-    # staticmethods
+    # staticmethods (don't operate on instances or class, independent as regular function)
+    # if you don't access instance or the class anywhere in the function use static method.
     @staticmethod
     def is_workday(day):
         if day.weekday() == 5 or day.weekday() == 6:
