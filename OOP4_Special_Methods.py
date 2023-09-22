@@ -21,14 +21,16 @@ class Employee:
         return "Employee('{}', '{}', {})".format(self.first, self.last, self.pay)
 
 # str readable representation of object, use as a display to the user.
-    # def __str__(self):
-    #     pass
-# calling the method
+# it escapes _repr_ method
+    def __str__(self):
+        return "{} - {}".format(self.fullname(), self.email)
 
 
 emp_1 = Employee("Tom", "Cruz", 20000)
 emp_2 = Employee("Jackie", "Chen", 30000)
 
-print(emp_1)
-# repr(emp_1) # printing employee instance whithout object info..
-# str(emp_1)
+print(emp_1) # this prints the str method only irrespective of repr
+
+# calling the method specifically to access both
+print(repr(emp_1)) # printing employee instance whithout object info..
+print(str(emp_1))
