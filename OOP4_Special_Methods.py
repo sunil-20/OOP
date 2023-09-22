@@ -42,16 +42,16 @@ print(len(emp_1.fullname()))
 #print(emp_1) # this prints the str method only irrespective of repr
 
 # calling the method specifically to access both
-# print(repr(emp_1)) # printing employee instance whithout object info..
-# print(str(emp_1))
+print(repr(emp_1)) # printing employee instance whithout object info..
+print(str(emp_1))
 
-# print(emp_1.__repr__())
-# print(emp_1.__str__())
+print(emp_1.__repr__())
+print(emp_1.__str__())
 
-# # dunder method for addition int and str 
-# # https://docs.python.org/3/reference/datamodel.html#special-method-names
-# print(int.__add__(1,2))
-# print(str.__add__("a", "b"))
+# dunder method for addition int and str 
+# https://docs.python.org/3/reference/datamodel.html#special-method-names
+print(int.__add__(1,2))
+print(str.__add__("a", "b"))
 
-# print using the __add__ dunder method
-#print( emp_1 + emp_2)
+print using the __add__ dunder method
+print( emp_1 + emp_2)
