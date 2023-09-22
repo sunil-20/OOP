@@ -1,4 +1,5 @@
 #  OOP in Python https://www.youtube.com/watch?v=BJ-VvGyQxho
+# create a class Employee
 class Employee:
     num_of_emps = 0
     raise_amount = 1.04  # class variable
@@ -35,6 +36,6 @@ print(Employee.num_of_emps)
 
 
 
-# print(emp_1.fullname())
-# print(Employee.fullname(emp_2))
-# print(emp_1.email)
+print(emp_1.fullname())
+print(Employee.fullname(emp_2))
+print(emp_1.email)
