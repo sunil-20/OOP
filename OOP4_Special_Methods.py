@@ -29,8 +29,15 @@ class Employee:
 emp_1 = Employee("Tom", "Cruz", 20000)
 emp_2 = Employee("Jackie", "Chen", 30000)
 
-print(emp_1) # this prints the str method only irrespective of repr
+#print(emp_1) # this prints the str method only irrespective of repr
 
 # calling the method specifically to access both
-print(repr(emp_1)) # printing employee instance whithout object info..
-print(str(emp_1))
+# print(repr(emp_1)) # printing employee instance whithout object info..
+# print(str(emp_1))
+
+print(emp_1.__repr__())
+print(emp_1.__str__())
+
+# dunder method for addition int and str objects
+print(int.__add__(1,2))
+print(str.__add__("a", "b"))
