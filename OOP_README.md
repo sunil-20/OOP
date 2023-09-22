@@ -53,6 +53,7 @@ In Python, both class methods and static methods are used to define methods that
 In summary, the main difference between class methods and static methods in Python is their access to class and instance data. Class methods have access to class-level data and are often used for class-level operations, while static methods are more like standalone functions within the class and don't have access to class or instance-specific data. The choice between them depends on the specific requirements of your code and how you intend to use them.
 
 **Access of objects inside a class:**
+
 Objects of one function (or method) in a class can access objects of another function in the same class, provided that those objects are attributes of the class and not local variables within the functions. This is because class attributes are accessible to all methods of the class, and objects created from the class have access to these attributes.
 
 Here's an example to illustrate this concept:
