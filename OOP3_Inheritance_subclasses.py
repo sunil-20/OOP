@@ -15,7 +15,7 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amt)
 # inheriting from Employee class
-class Developer(Employee):
+class Developer(Employee): # Developer inherit some attributes from Employee class
     raise_amt = 1.10
     def __init__(self, first, last, pay, prog_lang): # added programming language
         #use first, last and pay from the parent class Employee.
@@ -24,7 +24,7 @@ class Developer(Employee):
         self.prog_lang = prog_lang
 
 
-class Manager(Employee):
+class Manager(Employee): # inherit from the Employee class
     def __init__(self, first, last, pay, employees = None):
         super().__init__(first, last, pay)
         if employees is None:
