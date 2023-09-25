@@ -83,7 +83,9 @@ print(obj.value)  # Output: 2
 In the example above, the `value` attribute is shared between the `increment` and `double` methods. When you create an object (`obj`) from the `MyClass` class, that object has access to the `value` attribute, and both methods can access and modify it.
 
 So, in summary, objects created from a class can access and manipulate attributes that are part of the class, regardless of which method in the class is used to access or modify those attributes.
+
 **Detail on Self argument:** 
+
  In object-oriented programming, especially in Python, the `self` argument is a reference to the instance of the class that a method is called on. To understand this concept, it's helpful to think of a class as a blueprint for creating objects (instances), and `self` as a way to interact with the specific object that a method is currently operating on.
 
 Here's a more detailed explanation:
