@@ -58,7 +58,7 @@ mgr_1.remove_emp(dev_1)
 
 print(mgr_1.email)
 print(mgr_1.print_emps())
-#print(help(Developer))
+#print(help(Developer)) # Method resolution order Developer, Employee, builtins
 # print(dev_1.email)
 # print(dev_2.email)
 # print(dev_1.email)
