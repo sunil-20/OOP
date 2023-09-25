@@ -83,3 +83,39 @@ print(obj.value)  # Output: 2
 In the example above, the `value` attribute is shared between the `increment` and `double` methods. When you create an object (`obj`) from the `MyClass` class, that object has access to the `value` attribute, and both methods can access and modify it.
 
 So, in summary, objects created from a class can access and manipulate attributes that are part of the class, regardless of which method in the class is used to access or modify those attributes.
+**Detail on Self argument:** 
+ In object-oriented programming, especially in Python, the `self` argument is a reference to the instance of the class that a method is called on. To understand this concept, it's helpful to think of a class as a blueprint for creating objects (instances), and `self` as a way to interact with the specific object that a method is currently operating on.
+
+Here's a more detailed explanation:
+
+1. **Classes and Objects:** In Python, classes are used to define the structure and behavior of objects. An object is an instance of a class, and it can have its own set of attributes (variables) and methods (functions) defined in the class.
+
+2. **Methods and the `self` Argument:** When you define methods within a class, you typically include a special first parameter named `self`. This parameter represents the instance of the class. By convention, it's named `self`, but you could technically use any name, although it's strongly recommended to stick with `self` for clarity.
+
+3. **Instance-Specific Data:** Inside methods, you can access and manipulate instance-specific data (attributes) using `self`. For example, if a class has an attribute `name`, you can access it as `self.name` within a method to refer to the `name` attribute of the specific object.
+
+4. **Different Objects, Same Method:** If you create multiple objects (instances) from the same class, each object will have its own set of attributes and its own copy of the methods. When you call a method on an object, Python automatically passes a reference to that object as the `self` argument for that method.
+
+5. **Accessing Attributes and Methods:** By using `self`, you can access attributes and call methods specific to the instance. This allows you to work with the data and behavior of individual objects, even if they are created from the same class.
+
+Here's an example to illustrate the concept:
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        print(f"My name is {self.name} and I am {self.age} years old.")
+
+# Creating two instances of the Person class
+person1 = Person("Alice", 30)
+person2 = Person("Bob", 25)
+
+# Calling the introduce method on both instances
+person1.introduce()  # Output: "My name is Alice and I am 30 years old."
+person2.introduce()  # Output: "My name is Bob and I am 25 years old."
+```
+
+In this example, `self` in the `introduce` method refers to the specific instance (`person1` or `person2`) on which the method is called, allowing it to access the unique attributes (`name` and `age`) of that instance.
